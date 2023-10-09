@@ -1,0 +1,27 @@
+## CREATING THE GITHUB REPO 
+
+terraform {
+  required_providers {
+    github = {
+      source  = "integrations/github"
+      version = "~> 5.0"
+    }
+  }
+}
+
+provider "github" {
+  token = "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"
+}
+
+# Create repo 
+
+resource "github_repository" "r_name" {
+  name        = "myrepo989"
+  description = "My awesome codebase"
+
+  visibility = "public"
+
+}
+
+
+Resources used: https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository
