@@ -10,12 +10,12 @@ terraform {
 }
 
 provider "github" {
-  token = "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"
+  token = "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"
 }
 
 # Create repo 
 
-resource "github_repository" "r_name" {
+resource "github_repository" "name" {
   name        = "myrepo9740"
   description = "My awesome codebase"
 
